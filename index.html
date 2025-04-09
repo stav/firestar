@@ -2,153 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Swiper + Fancybox Gallery</title>
+    <title>Vertical Gallery with Fancybox</title>
 
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- Fancybox CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"
     />
-
     <style>
       body {
         margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        padding: 2rem;
         background: #f4f4f4;
+        font-family: sans-serif;
       }
 
-      .swiper {
-        height: 90vh;
-        width: auto;
-        max-width: 800px;
+      .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
       }
 
-      .swiper-slide img {
+      .gallery img {
         max-width: 360px;
-        display: block;
         border-radius: 8px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <!-- Swiper Container -->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="img/01.jpg" data-fancybox="gallery">
-            <img src="img/01.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/02.jpg" data-fancybox="gallery">
-            <img src="img/02.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/03.jpg" data-fancybox="gallery">
-            <img src="img/03.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/04.jpg" data-fancybox="gallery">
-            <img src="img/04.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/05.jpg" data-fancybox="gallery">
-            <img src="img/05.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/06.jpg" data-fancybox="gallery">
-            <img src="img/06.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/07.jpg" data-fancybox="gallery">
-            <img src="img/07.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/08.jpg" data-fancybox="gallery">
-            <img src="img/08.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/09.jpg" data-fancybox="gallery">
-            <img src="img/09.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/10.jpg" data-fancybox="gallery">
-            <img src="img/10.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/11.jpg" data-fancybox="gallery">
-            <img src="img/11.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/12.jpg" data-fancybox="gallery">
-            <img src="img/12.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/13.jpg" data-fancybox="gallery">
-            <img src="img/13.jpg" />
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/14.jpg" data-fancybox="gallery">
-            <img src="img/14.jpg" />
-          </a>
-        </div>
-      </div>
-
-      <!-- Navigation + Pagination -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+    <div class="gallery">
+      <a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" /></a>
+      <a href="img/02.jpg" data-fancybox="gallery"><img src="img/02.jpg" /></a>
+      <a href="img/03.jpg" data-fancybox="gallery"><img src="img/03.jpg" /></a>
+      <a href="img/04.jpg" data-fancybox="gallery"><img src="img/04.jpg" /></a>
+      <a href="img/05.jpg" data-fancybox="gallery"><img src="img/05.jpg" /></a>
+      <a href="img/06.jpg" data-fancybox="gallery"><img src="img/06.jpg" /></a>
+      <a href="img/07.jpg" data-fancybox="gallery"><img src="img/07.jpg" /></a>
+      <a href="img/08.jpg" data-fancybox="gallery"><img src="img/08.jpg" /></a>
+      <a href="img/09.jpg" data-fancybox="gallery"><img src="img/09.jpg" /></a>
+      <a href="img/10.jpg" data-fancybox="gallery"><img src="img/10.jpg" /></a>
+      <a href="img/11.jpg" data-fancybox="gallery"><img src="img/11.jpg" /></a>
+      <a href="img/12.jpg" data-fancybox="gallery"><img src="img/12.jpg" /></a>
+      <a href="img/13.jpg" data-fancybox="gallery"><img src="img/13.jpg" /></a>
+      <a href="img/14.jpg" data-fancybox="gallery"><img src="img/14.jpg" /></a>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Fancybox JS -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
-
-    <!-- Init Swiper + Fancybox -->
     <script>
-      const swiper = new Swiper(".swiper", {
-        // direction: "vertical", // <-- Add this line
-        // loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true,
-        },
-        // lazy: true,
-      });
-
       Fancybox.bind("[data-fancybox='gallery']", {
         Thumbs: false,
         Toolbar: true,
