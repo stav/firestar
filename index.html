@@ -1,127 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Responsive Vertical Gallery with Captions</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"
-    />
-    <style>
-      body {
-        margin: 0;
-        padding: 2rem;
-        background: #f4f4f4;
-        font-family: sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <title>FireStar</title>
 
-      .gallery {
-        display: flex;
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+      font-family: sans-serif;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .image-caption-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .image-caption-pair img {
+      max-width: 360px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .caption {
+      max-width: 300px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .image-caption-pair {
         flex-direction: column;
-        gap: 2rem;
         align-items: center;
       }
 
-      .image-caption-pair {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 1rem;
-        max-width: 100%;
-        flex-wrap: wrap;
-      }
-
-      .image-caption-pair img {
-        max-width: 360px;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
       .caption {
-        max-width: 300px;
-        font-size: 1rem;
-        color: #333;
+        text-align: center;
       }
+    }
 
-      @media (max-width: 768px) {
-        .image-caption-pair {
-          flex-direction: column;
-          align-items: center;
-        }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
 
-        .caption {
-          text-align: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="gallery">
-      <div class="image-caption-pair">
-        <a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" /></a>
-        <div class="caption">Caption for image 01.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/02.jpg" data-fancybox="gallery"><img src="img/02.jpg" /></a>
-        <div class="caption">Caption for image 02.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/03.jpg" data-fancybox="gallery"><img src="img/03.jpg" /></a>
-        <div class="caption">Caption for image 03.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/04.jpg" data-fancybox="gallery"><img src="img/04.jpg" /></a>
-        <div class="caption">Caption for image 04.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/05.jpg" data-fancybox="gallery"><img src="img/05.jpg" /></a>
-        <div class="caption">Caption for image 05.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/06.jpg" data-fancybox="gallery"><img src="img/06.jpg" /></a>
-        <div class="caption">Caption for image 06.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/07.jpg" data-fancybox="gallery"><img src="img/07.jpg" /></a>
-        <div class="caption">Caption for image 07.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/08.jpg" data-fancybox="gallery"><img src="img/08.jpg" /></a>
-        <div class="caption">Caption for image 08.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/09.jpg" data-fancybox="gallery"><img src="img/09.jpg" /></a>
-        <div class="caption">Caption for image 09.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/10.jpg" data-fancybox="gallery"><img src="img/10.jpg" /></a>
-        <div class="caption">Caption for image 10.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/11.jpg" data-fancybox="gallery"><img src="img/11.jpg" /></a>
-        <div class="caption">Caption for image 11.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/12.jpg" data-fancybox="gallery"><img src="img/12.jpg" /></a>
-        <div class="caption">Caption for image 12.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/13.jpg" data-fancybox="gallery"><img src="img/13.jpg" /></a>
-        <div class="caption">Caption for image 13.</div>
-      </div>
-      <div class="image-caption-pair">
-        <a href="img/14.jpg" data-fancybox="gallery"><img src="img/14.jpg" /></a>
-        <div class="caption">Caption for image 14.</div>
-      </div>
+<body>
+  <h1>FireStar</h1>
+  <div class="gallery">
+    <div class="image-caption-pair">
+      <a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" /></a>
+      <div class="caption">Caption for image 01.</div>
     </div>
+    <div class="image-caption-pair">
+      <a href="img/02.jpg" data-fancybox="gallery"><img src="img/02.jpg" /></a>
+      <div class="caption">Caption for image 02.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/03.jpg" data-fancybox="gallery"><img src="img/03.jpg" /></a>
+      <div class="caption">Caption for image 03.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/04.jpg" data-fancybox="gallery"><img src="img/04.jpg" /></a>
+      <div class="caption">Caption for image 04.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/05.jpg" data-fancybox="gallery"><img src="img/05.jpg" /></a>
+      <div class="caption">Caption for image 05.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/06.jpg" data-fancybox="gallery"><img src="img/06.jpg" /></a>
+      <div class="caption">Caption for image 06.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/07.jpg" data-fancybox="gallery"><img src="img/07.jpg" /></a>
+      <div class="caption">Caption for image 07.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/08.jpg" data-fancybox="gallery"><img src="img/08.jpg" /></a>
+      <div class="caption">Caption for image 08.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/09.jpg" data-fancybox="gallery"><img src="img/09.jpg" /></a>
+      <div class="caption">Caption for image 09.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/10.jpg" data-fancybox="gallery"><img src="img/10.jpg" /></a>
+      <div class="caption">Caption for image 10.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/11.jpg" data-fancybox="gallery"><img src="img/11.jpg" /></a>
+      <div class="caption">Caption for image 11.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/12.jpg" data-fancybox="gallery"><img src="img/12.jpg" /></a>
+      <div class="caption">Caption for image 12.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/13.jpg" data-fancybox="gallery"><img src="img/13.jpg" /></a>
+      <div class="caption">Caption for image 13.</div>
+    </div>
+    <div class="image-caption-pair">
+      <a href="img/14.jpg" data-fancybox="gallery"><img src="img/14.jpg" /></a>
+      <div class="caption">Caption for image 14.</div>
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind("[data-fancybox='gallery']", {
-        Thumbs: false,
-        Toolbar: true,
-      });
-    </script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind("[data-fancybox='gallery']", {
+      Thumbs: false,
+      Toolbar: true,
+    });
+  </script>
+</body>
+
 </html>
