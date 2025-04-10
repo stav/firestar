@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Vertical Gallery with Fancybox</title>
+    <title>Responsive Vertical Gallery with Captions</title>
 
     <link
       rel="stylesheet"
@@ -14,38 +14,68 @@
         padding: 2rem;
         background: #f4f4f4;
         font-family: sans-serif;
-      }
+        }
+
 
       .gallery {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
         align-items: center;
-        gap: 1rem;
       }
 
-      .gallery img {
+      .image-caption-pair {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+        max-width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .image-caption-pair img {
         max-width: 360px;
         border-radius: 8px;
         cursor: pointer;
       }
+
+      .caption {
+        max-width: 300px;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      @media (max-width: 768px) {
+        .image-caption-pair {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .caption {
+          text-align: center;
+        }
+      }
+
     </style>
   </head>
   <body>
     <div class="gallery">
-      <a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" /></a>
-      <a href="img/02.jpg" data-fancybox="gallery"><img src="img/02.jpg" /></a>
-      <a href="img/03.jpg" data-fancybox="gallery"><img src="img/03.jpg" /></a>
-      <a href="img/04.jpg" data-fancybox="gallery"><img src="img/04.jpg" /></a>
-      <a href="img/05.jpg" data-fancybox="gallery"><img src="img/05.jpg" /></a>
-      <a href="img/06.jpg" data-fancybox="gallery"><img src="img/06.jpg" /></a>
-      <a href="img/07.jpg" data-fancybox="gallery"><img src="img/07.jpg" /></a>
-      <a href="img/08.jpg" data-fancybox="gallery"><img src="img/08.jpg" /></a>
-      <a href="img/09.jpg" data-fancybox="gallery"><img src="img/09.jpg" /></a>
-      <a href="img/10.jpg" data-fancybox="gallery"><img src="img/10.jpg" /></a>
-      <a href="img/11.jpg" data-fancybox="gallery"><img src="img/11.jpg" /></a>
-      <a href="img/12.jpg" data-fancybox="gallery"><img src="img/12.jpg" /></a>
-      <a href="img/13.jpg" data-fancybox="gallery"><img src="img/13.jpg" /></a>
-      <a href="img/14.jpg" data-fancybox="gallery"><img src="img/14.jpg" /></a>
+      <div class="image-caption-pair">
+        <a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" /></a>
+        <div class="caption">Beautiful mountain landscape at sunrise.</div>
+      </div>
+
+      <div class="image-caption-pair">
+        <a href="img/02.jpg" data-fancybox="gallery"><img src="img/02.jpg" /></a>
+        <div class="caption">Cozy cabin in the woods during fall.</div>
+      </div>
+
+      <div class="image-caption-pair">
+        <a href="img/03.jpg" data-fancybox="gallery"><img src="img/03.jpg" /></a>
+        <div class="caption">Quiet beach with turquoise water.</div>
+      </div>
+
+      <!-- Add more image-caption pairs as needed -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
